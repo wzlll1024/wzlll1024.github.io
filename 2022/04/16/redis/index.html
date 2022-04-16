@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Redis, 赤诚">
+    <meta name="keywords" content="Redis, Racc">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Redis | 赤诚</title>
+    <title>Redis | Racc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -43,7 +43,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">赤诚</span>
+                    <span class="logo-span">Racc</span>
                 </a>
             </div>
             
@@ -142,7 +142,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">赤诚</div>
+        <div class="logo-name">Racc</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -491,7 +491,7 @@
 </ul>
 <h4 id="不适合"><a href="#不适合" class="headerlink" title="不适合"></a>不适合</h4><p>需要事务支持</p>
 <p>基于sql的结构化查询，处理复杂关系（用户自定义条件查询）</p>
-<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/../jpg/image-20220415102704965.png" alt="image-20220415102704965"></h4><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/jpg/image-20220415102704965.png" alt="image-20220415102704965"></h4><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
 <li>string字符串</li>
 <li>list列表</li>
 <li>set集合 <strong>（无序，值不可重复）</strong></li>
@@ -584,7 +584,7 @@
 <li><strong>-1</strong>：永久有效的数据</li>
 <li>-<strong>2</strong> ：已经过期的数据 或被删除的数据 或 未定义的数据</li>
 </ul>
-<h5 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h5><p><img src="/../jpg/image-20220415111456852.png" alt="image-20220415111456852"></p>
+<h5 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h5><p><img src="/image-20220415111456852.png" alt="image-20220415111456852"></p>
 <h3 id="数据删除策略"><a href="#数据删除策略" class="headerlink" title="数据删除策略"></a>数据删除策略</h3><h4 id="定时删除"><a href="#定时删除" class="headerlink" title="定时删除"></a>定时删除</h4><p>创建一个定时器，当key设置有过期时间，且过期时间到达时，由定时器任务立即执行对键的删除操作</p>
 <ul>
 <li><strong>优点</strong>：节约内存，到时就删除，快速释放掉不必要的内存占用</li>
@@ -758,7 +758,7 @@ allkeys-random：任意选择数据淘汰，相当于随机<span aria-hidden="tr
 <li>新master上任，其他slave切换master，原master作为slave故障恢复后连接</li>
 </ol>
 <h2 id="Redis-cluster-集群"><a href="#Redis-cluster-集群" class="headerlink" title="Redis cluster 集群"></a>Redis cluster 集群</h2><p>集群就是使用网络将若干台计算机联通起来，并提供统一的管理方式，使其对外呈现单机的服务效果</p>
-<h3 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a><img src="/../jpg/image-20220415113802589.png" alt="image-20220415113802589">作用</h3><ul>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="/./jpg/image-20220415113802589.png" alt="image-20220415113802589"></h3><h3 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h3><ul>
 <li>分散单台服务器的访问压力，实现负载均衡</li>
 <li>分散单台服务器的存储压力，实现可扩展性</li>
 <li>降低单台服务器宕机带来的业务灾难</li>
@@ -824,7 +824,7 @@ allkeys-random：任意选择数据淘汰，相当于随机<span aria-hidden="tr
 <p>9.应用服务器无法及时得到数据响应请求，来自客户端的请求数量越来越多，应用服务器崩溃</p>
 <p>10.应用服务器，redis，数据库全部重启，效果不理想</p>
 <p>总而言之就两点：短时间范围内，大量key集中过期</p>
-<p><img src="/../jpg/image-20220302143411228.d3a92dd4.png" alt="image-20220302143411228"></p>
+<p><img src="/./jpg/image-20220302143411228.d3a92dd4.png" alt="image-20220302143411228"></p>
 <p><strong>解决方案</strong></p>
 <ul>
 <li>思路：</li>
@@ -866,7 +866,7 @@ allkeys-random：任意选择数据淘汰，相当于随机<span aria-hidden="tr
 <p>2.多个数据请求从服务器直接压到Redis后，均未命中</p>
 <p>3.Redis在短时间内发起了大量对数据库中同一数据的访问</p>
 <p>总而言之就两点：单个key高热数据，key过期</p>
-<p><img src="/../jpg/image-20220302143844340.5b35be0c.png" alt="image-20220302143844340"></p>
+<p><img src="/./jpg/image-20220302143844340.5b35be0c.png" alt="image-20220302143844340"></p>
 <p><strong>解决方案</strong>：</p>
 <p>1.预先设定</p>
 <p> 以电商为例，每个商家根据店铺等级，指定若干款主打商品，在购物节期间，加大此类信息key的过期时长 注意：购物节不仅仅指当天，以及后续若干天，访问峰值呈现逐渐降低的趋势</p>
@@ -890,7 +890,7 @@ allkeys-random：任意选择数据淘汰，相当于随机<span aria-hidden="tr
 <p><strong>问题排查：</strong></p>
 <p>1.Redis中大面积出现未命中</p>
 <p>2.出现非正常URL访问</p>
-<p><img src="/../jpg/image-20220302144257762.f2b4b3f1.png" alt="image-20220302144257762"></p>
+<p><img src="/./jpg/image-20220302144257762.f2b4b3f1.png" alt="image-20220302144257762"></p>
 <p><strong>问题分析</strong>：</p>
 <ul>
 <li>获取的数据在数据库中也不存在，数据库查询未得到对应数据</li>
@@ -1252,7 +1252,7 @@ allkeys-random：任意选择数据淘汰，相当于随机<span aria-hidden="tr
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: 赤诚<br />'
+            + '来源: Racc<br />'
             + '文章作者: singleness of heart<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
